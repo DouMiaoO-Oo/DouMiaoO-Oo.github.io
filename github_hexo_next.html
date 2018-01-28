@@ -339,7 +339,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/config/" itemprop="url" rel="index">
-                    <span itemprop="name">config</span>
+                    <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
 
@@ -350,6 +350,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/github_hexo_next.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/github_hexo_next.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -437,10 +447,14 @@
 <h3 id="tags-amp-categories的用法"><a href="#tags-amp-categories的用法" class="headerlink" title="tags &amp; categories的用法"></a>tags &amp; categories的用法</h3><p>直接参考主题配置文件目录下的<code>readme</code>即可</p>
 <p>参考YAML格式: <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="noopener">https://hexo.io/docs/front-matter.html</a></p>
 <h3 id="开启站内搜索功能"><a href="#开启站内搜索功能" class="headerlink" title="开启站内搜索功能"></a>开启站内搜索功能</h3><p>本地搜索配置，官网链接: <a href="https://www.npmjs.com/package/hexo-generator-searchdb" target="_blank" rel="noopener">https://www.npmjs.com/package/hexo-generator-searchdb</a></p>
-<h4 id="1-安装-hexo-generator-searchdb，在站点的根目录下执行以下命令："><a href="#1-安装-hexo-generator-searchdb，在站点的根目录下执行以下命令：" class="headerlink" title="1. 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令："></a>1. 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<h4 id="2-站点配置文件，新增以下内容到任意位置："><a href="#2-站点配置文件，新增以下内容到任意位置：" class="headerlink" title="2. 站点配置文件，新增以下内容到任意位置："></a>2. 站点配置文件，新增以下内容到任意位置：</h4><p>经测试，这一步可以不做，不然多生成一个search.xml 冲突</p>
+<h4 id="安装-hexo-generator-searchdb，在站点的根目录下执行以下命令："><a href="#安装-hexo-generator-searchdb，在站点的根目录下执行以下命令：" class="headerlink" title="安装 hexo-generator-searchdb，在站点的根目录下执行以下命令："></a>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h4 id="站点配置文件，新增以下内容到任意位置："><a href="#站点配置文件，新增以下内容到任意位置：" class="headerlink" title="站点配置文件，新增以下内容到任意位置："></a>站点配置文件，新增以下内容到任意位置：</h4><p>经测试，这一步可以不做，不然多生成一个search.xml 冲突</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-<h4 id="3-主题配置文件，启用本地搜索功能："><a href="#3-主题配置文件，启用本地搜索功能：" class="headerlink" title="3. 主题配置文件，启用本地搜索功能："></a>3. 主题配置文件，启用本地搜索功能：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<h4 id="主题配置文件，启用本地搜索功能："><a href="#主题配置文件，启用本地搜索功能：" class="headerlink" title="主题配置文件，启用本地搜索功能："></a>主题配置文件，启用本地搜索功能：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<h3 id="gitment评论"><a href="#gitment评论" class="headerlink" title="gitment评论"></a>gitment评论</h3><p>参考: <a href="http://blog.csdn.net/yanzi1225627/article/details/77890414" target="_blank" rel="noopener">http://blog.csdn.net/yanzi1225627/article/details/77890414</a><br>注：如果想查看自己的Github 账户ID，可以在浏览器输入： <a href="https://api.github.com/users/" target="_blank" rel="noopener">https://api.github.com/users/</a>你的账户名 </p>
+<h3 id="腾讯公益404页面"><a href="#腾讯公益404页面" class="headerlink" title="腾讯公益404页面"></a>腾讯公益404页面</h3><p>参考: <a href="http://theme-next.iissnan.com/theme-settings.html#volunteer-404" target="_blank" rel="noopener">http://theme-next.iissnan.com/theme-settings.html#volunteer-404</a><br>腾讯公益404页面，寻找丢失儿童，让大家一起关注此项公益事业！效果如下 <a href="http://www.ixirong.com/404.html" target="_blank" rel="noopener">http://www.ixirong.com/404.html</a></p>
+<p>使用方法，新建 404.html 页面，放到主题的 source 目录下，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://qzone.qq.com/gy/404/style/404style.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;script type=&quot;text/plain&quot; src=&quot;http://www.qq.com/404/search_children.js&quot;</span><br><span class="line">          charset=&quot;utf-8&quot; homePageUrl=&quot;/&quot;</span><br><span class="line">          homePageName=&quot;回到我的主页&quot;&gt;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/data.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/page.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>未完成，访问不存在页面不能主动访问<code>404.html</code>，需要进一步完善。</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>: <a href="http://barrysite.me/" target="_blank" rel="noopener">barrysite.me</a>, 或者参考他的<a href="https://github.com/lubaolei161" target="_blank" rel="noopener">github</a><br>: <a href="http://volcfamily.cn/" target="_blank" rel="noopener">volcfamily</a><br>: <a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">Hexo设置</a><br>: <a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="noopener">next 主题设置</a></p>
 
       
@@ -476,6 +490,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/20180126测试.html" rel="prev" title="20180126测试">
+                20180126测试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -502,6 +520,14 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
 
   
 
@@ -555,7 +581,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -566,7 +592,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -611,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装和配置Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装和配置Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Hexo进行本地建站"><span class="nav-number">1.2.</span> <span class="nav-text">使用Hexo进行本地建站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建与Github账号同名的Repository"><span class="nav-number">1.3.</span> <span class="nav-text">创建与Github账号同名的Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置SSH"><span class="nav-number">1.4.</span> <span class="nav-text">配置SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-生成SSH"><span class="nav-number">1.4.1.</span> <span class="nav-text">(1) 生成SSH</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-复制公钥内容到Github账户信息中"><span class="nav-number">1.4.2.</span> <span class="nav-text">(2) 复制公钥内容到Github账户信息中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-测试SSH是否配置成功"><span class="nav-number">1.4.3.</span> <span class="nav-text">(3) 测试SSH是否配置成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-配置github-账户"><span class="nav-number">1.4.4.</span> <span class="nav-text">(4) 配置github 账户</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换为-NexT主题"><span class="nav-number">2.</span> <span class="nav-text">更换为 NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#站点配置文件-显示的语言"><span class="nav-number">3.</span> <span class="nav-text">站点配置文件(显示的语言)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改头像"><span class="nav-number">4.</span> <span class="nav-text">修改头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布文章"><span class="nav-number">5.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章资源文件夹"><span class="nav-number">6.</span> <span class="nav-text">文章资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永久链接"><span class="nav-number">7.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tags-amp-categories的用法"><span class="nav-number">8.</span> <span class="nav-text">tags &amp; categories的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启站内搜索功能"><span class="nav-number">9.</span> <span class="nav-text">开启站内搜索功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装-hexo-generator-searchdb，在站点的根目录下执行以下命令："><span class="nav-number">9.1.</span> <span class="nav-text">1. 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-站点配置文件，新增以下内容到任意位置："><span class="nav-number">9.2.</span> <span class="nav-text">2. 站点配置文件，新增以下内容到任意位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-主题配置文件，启用本地搜索功能："><span class="nav-number">9.3.</span> <span class="nav-text">3. 主题配置文件，启用本地搜索功能：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装和配置Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装和配置Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Hexo进行本地建站"><span class="nav-number">1.2.</span> <span class="nav-text">使用Hexo进行本地建站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建与Github账号同名的Repository"><span class="nav-number">1.3.</span> <span class="nav-text">创建与Github账号同名的Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置SSH"><span class="nav-number">1.4.</span> <span class="nav-text">配置SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-生成SSH"><span class="nav-number">1.4.1.</span> <span class="nav-text">(1) 生成SSH</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-复制公钥内容到Github账户信息中"><span class="nav-number">1.4.2.</span> <span class="nav-text">(2) 复制公钥内容到Github账户信息中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-测试SSH是否配置成功"><span class="nav-number">1.4.3.</span> <span class="nav-text">(3) 测试SSH是否配置成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-配置github-账户"><span class="nav-number">1.4.4.</span> <span class="nav-text">(4) 配置github 账户</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换为-NexT主题"><span class="nav-number">2.</span> <span class="nav-text">更换为 NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#站点配置文件-显示的语言"><span class="nav-number">3.</span> <span class="nav-text">站点配置文件(显示的语言)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改头像"><span class="nav-number">4.</span> <span class="nav-text">修改头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布文章"><span class="nav-number">5.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章资源文件夹"><span class="nav-number">6.</span> <span class="nav-text">文章资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永久链接"><span class="nav-number">7.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tags-amp-categories的用法"><span class="nav-number">8.</span> <span class="nav-text">tags &amp; categories的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启站内搜索功能"><span class="nav-number">9.</span> <span class="nav-text">开启站内搜索功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-hexo-generator-searchdb，在站点的根目录下执行以下命令："><span class="nav-number">9.1.</span> <span class="nav-text">安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点配置文件，新增以下内容到任意位置："><span class="nav-number">9.2.</span> <span class="nav-text">站点配置文件，新增以下内容到任意位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题配置文件，启用本地搜索功能："><span class="nav-number">9.3.</span> <span class="nav-text">主题配置文件，启用本地搜索功能：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitment评论"><span class="nav-number">10.</span> <span class="nav-text">gitment评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#腾讯公益404页面"><span class="nav-number">11.</span> <span class="nav-text">腾讯公益404页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">12.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -788,6 +814,47 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '13816863',
+            repo: 'https://github.com/DouMiaoO-Oo/DouMiaoO-Oo.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '1411133304f72ff928ad2159f915bfbfa24fa248',
+            
+                client_id: '54608d3d43b220babc23'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
